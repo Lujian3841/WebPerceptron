@@ -1,42 +1,59 @@
 # Web Perceptron
 
-A small browser-based machine learning demo that classifies a 5x5 grid drawing as either an **L** or a **T** using a perceptron model.
+A browser-based machine learning demo that classifies a 5x5 grid drawing as either an **L** or a **T** using a simple perceptron model.
 
-## Project Overview
+## Overview
 
-This project was built to demonstrate the basic idea behind a perceptron classifier in a simple visual way. The user clicks cells in a 5x5 grid, and the page predicts whether the drawing looks more like an L or a T.
+This project demonstrates the core idea behind a perceptron classifier in a visual and interactive way. The user clicks cells in a 5x5 grid, and the page predicts whether the drawing is closer to an L or a T.
+
+The model is intentionally simple so the learning process is easy to understand. It uses hand-defined base shapes, generates noisy training examples, trains a perceptron in JavaScript, and updates the prediction live as the user changes the grid.
 
 ## Features
 
-- Interactive 5x5 grid
-- Browser-based prediction
-- Simple perceptron logic
-- Clear/reset workflow
+- Interactive 5x5 drawing grid
+- Live browser-based prediction
+- 120 generated training samples
+- Noise-based sample generation to simulate variation
+- Simple perceptron training loop
 - Lightweight HTML, CSS, and JavaScript implementation
 
 ## Skills Demonstrated
 
 - Machine learning fundamentals
-- Perceptron classification
-- Front-end web development
-- JavaScript event handling
-- Translating model logic into an interactive UI
+- Binary classification
+- Perceptron training logic
+- JavaScript DOM interaction
+- Front-end UI development
+- Explaining ML concepts through an interactive demo
 
-## Files
+## Project Files
 
 - `index.html` — page structure and UI
-- `style.css` — visual styling
-- `perceptron.js` — perceptron logic and prediction behavior
+- `style.css` — grid and page styling
+- `perceptron.js` — dataset generation, perceptron training, and prediction logic
+
+## How It Works
+
+1. The project defines two base 5x5 shapes: one L and one T.
+2. It generates multiple slightly noisy versions of each shape.
+3. A perceptron trains on those examples.
+4. The user clicks cells on the grid.
+5. The model predicts whether the active grid pattern is closer to an L or a T.
 
 ## How to Run
 
-Open `index.html` in a browser, draw a pattern on the grid, and view the prediction.
+Clone or download the repository and open `index.html` in a web browser.
+
+No server or build step is required.
 
 ## Portfolio Notes
 
-This is a good project to show because it is easy to understand quickly and connects web development with machine learning basics. It would be stronger with:
+This project is useful as a small, easy-to-demo example of machine learning fundamentals. It pairs well with larger infrastructure or security projects because it shows range across web development and AI/ML basics.
 
-- A short explanation of how the perceptron weights work
-- More training examples
-- Screenshots or a GIF demo
-- A GitHub Pages deployment link
+## Future Improvements
+
+- Add a visual display of model weights
+- Add a reset/retrain button
+- Add GitHub Pages deployment
+- Add screenshots or an animated demo
+- Expand to more letters or symbols
